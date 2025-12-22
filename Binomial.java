@@ -25,7 +25,7 @@ public class Binomial {
 		return 0;
 	}
 
-	private static long binomial(int n, int k, int[][] memo) {
+	private static long binomial(int n, int k, long[][] memo) {
 		if (memo[n][k] != -1) {
 			return memo[n][k];
 		}
@@ -43,4 +43,5 @@ public class Binomial {
 		return memo[n][k];
 	}
 }
+
 
