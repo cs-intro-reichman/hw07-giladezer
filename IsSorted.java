@@ -7,8 +7,18 @@ public class IsSorted {
 
     // Helper recursive function
     private static boolean isSorted(int[] a, int i) {
-        //// Replace the following statement with your code
-        return false; 
+        // Base case: if we reach the end of the array or there's only one element left
+        if (i >= a.length - 1) {
+            return true;
+        }
+
+        // Check if the current element is greater than the next one
+        if (a[i] > a[i + 1]) {
+            return false;
+        }
+
+        // Recur for the next index
+        return isSorted(a, i + 1);
     }
 
     public static void main(String[] args) {
