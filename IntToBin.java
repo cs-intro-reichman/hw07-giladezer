@@ -8,12 +8,13 @@ public class IntToBin {
 
     /** Returns the binary representation of the given integer, as a string of 0's and 1's. 5 = 101 */
     public static String toBinary(int x) {
-       if( x == 0 ) {
-           return "0";
-       }else if( x == 1 ) {
-           return "1";
-       } else {
-           return toBinary(x / 2) + (x % 2);
-       }
-    }    
+        if (x < 0) {
+            return "-" + toBinary(-x);
+        }
+        if (x < 2) {
+            return "" + x;
+        }
+        return toBinary(x / 2) + (x % 2);
+    }
+  
  }
